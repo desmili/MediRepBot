@@ -4,3 +4,4 @@ pytesseract
 pdf2image
 pypdf2
 openai
+python-multipart
