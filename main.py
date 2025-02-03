@@ -1,5 +1,5 @@
 #MediRepBot
-
+#DiagnoBot
 from fastapi import FastAPI, File, UploadFile
 import pytesseract
 from pdf2image import convert_from_bytes
