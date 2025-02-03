@@ -1,4 +1,4 @@
-"""from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile
 import pytesseract
 from pdf2image import convert_from_bytes
 import PyPDF2
@@ -65,4 +65,4 @@ async def upload_file(file: UploadFile = File(...)):
     
     summary = summarize_text(text)
     
-    return {"summary": summary}"""
+    return {"summary": summary}
