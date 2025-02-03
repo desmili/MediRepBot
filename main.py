@@ -26,7 +26,7 @@ class Item(BaseModel):
     price: float
     tax: float = None
  
-# OpenAI API Key (Replace with your own API key)
+"""# OpenAI API Key (Replace with your own API key)
 openai.api_key = "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"
 
 # Sample list of medical terms for validation
@@ -52,7 +52,7 @@ def extract_text_from_image(image_bytes):
     return text.strip()
 
 def is_medical_report(text):
-    return any(term.lower() in text.lower() for term in MEDICAL_TERMS)
+    return any(term.lower() in text.lower() for term in MEDICAL_TERMS)"""
 
 def summarize_text(text):
     response = openai.ChatCompletion.create(
