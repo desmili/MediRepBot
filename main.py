@@ -59,8 +59,9 @@ def is_medical_report(text):
 
 def summarize_text(text):
     """Summarize the medical report using OpenAI"""
+    #gpt-4, OLD
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo", 
             messages=[
             {"role": "system", "content": "You are a medical assistant that simplifies reports for patients."},
             {"role": "user", "content": f"Summarize this medical report in layman's terms:\n{text}"}
