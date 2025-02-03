@@ -58,11 +58,11 @@ async def upload_file(file: UploadFile = File(...)):
         return {"error": "Unsupported file format. Please upload a PDF or image file."}
     
     if not text:
-        return {"error": "Could not extract text from the file."}"""
+        return {"error": "Could not extract text from the file."}
     
     if not is_medical_report(text):
         return {"error": "This does not appear to be a medical report."}
     
     summary = summarize_text(text)
     
-    return {"summary": summary}
+    return {"summary": summary}"""
