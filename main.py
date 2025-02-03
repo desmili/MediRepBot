@@ -1,4 +1,3 @@
-#from fastapi import FastAPI
 from fastapi import FastAPI, File, UploadFile
 import pytesseract
 from pdf2image import convert_from_bytes
@@ -7,12 +6,6 @@ import openai
 import io
 
 app = FastAPI()
-
-@app.get("/")
-def read_root():
-    return {"message": "API is working!"}
-    
-#app = FastAPI()
 
 # OpenAI API Key (Replace with your own API key)
 openai.api_key = "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"
