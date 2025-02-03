@@ -45,7 +45,7 @@ def summarize_text(text):
     )
     return response["choices"][0]["message"]["content"].strip()
 
-@app.post("/upload/")
+"""@app.post("/upload/")
 async def upload_file(file: UploadFile = File(...)):
     contents = await file.read()
     text = ""
@@ -65,4 +65,4 @@ async def upload_file(file: UploadFile = File(...)):
     
     summary = summarize_text(text)
     
-    return {"summary": summary}
+    return {"summary": summary}"""
