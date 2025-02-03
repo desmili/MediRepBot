@@ -20,8 +20,11 @@ app.add_middleware(
 )
 
 # OpenAI API Key (Replace with your key)
-openai.api_key = "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"
+#openai.api_key = "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"
+client = openai.OpenAI(api_key="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")
 
+
+#print(response.choices[0].message.content)
 # Medical terms for validation
 MEDICAL_TERMS = {"hemoglobin", "MRI", "X-ray", "WBC", "RBC", "platelets", "glucose", "cholesterol"}
 
@@ -56,7 +59,7 @@ def is_medical_report(text):
 
 def summarize_text(text):
     """Summarize the medical report using OpenAI"""
-    response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
         model="gpt-4",
         messages=[
             {"role": "system", "content": "You are a medical assistant that simplifies reports for patients."},
