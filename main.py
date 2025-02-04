@@ -71,7 +71,7 @@ def summarize_text(text):
     response = client.chat.completions.create(
         model="gpt-4", 
             messages=[
-            {"role": "system", "content": "You are a medical assistant that simplifies reports for patients and an expert translator to translate from English to Marathi."},
+            {"role": "system", "content": "You are a medical assistant that simplifies reports for patients."},
             {"role": "user", "content": f"Summarize this medical report in layman's terms:\n{text}"},
             #{"role": "user", "content": f"Translate the following English text to Marathi:\n\n{text}"},
         ]
