@@ -72,8 +72,8 @@ def summarize_text(text):
         model="gpt-4", 
             messages=[
             {"role": "system", "content": "You are a medical assistant that simplifies reports for patients and an expert translator to translate from English to Marathi."},
-            {"role": "user", "content": f"Summarize this medical report in layman's terms:\n{text}"},
-            {"role": "user", "content": f"Translate the following English text to Marathi:\n\n{text}",
+            {"role": "user", "content": f"Summarize this medical report in layman's terms in Marathi language:\n{text}"},
+            #{"role": "user", "content": f"Translate the following English text to Marathi:\n\n{text}"},
         ]
     )
     #return response["choices"][0]["message"]["content"].strip()
