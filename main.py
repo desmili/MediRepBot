@@ -65,7 +65,7 @@ def is_medical_report(text):
 def summarize_text(text):
     """Summarize the medical report using OpenAI"""
     #gpt-3.5-turbo, gpt-4, gpt-4-turbo, gpt-4o-mini, GPT-4o
-    response = client.chat.completions.create(
+    response = client.openai.ChatCompletion.create(
         model="gpt-4o-mini", 
             messages=[
             {"role": "system", "content": "You are a medical assistant that simplifies reports for patients."},
