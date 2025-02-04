@@ -20,14 +20,18 @@ app.add_middleware(
 )
 
 # OpenAI API Key (Replace with your key)
-#openai.api_key = "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"
+
+
 #MilindKey
-client = openai.OpenAI(api_key="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")
-#DiagnoBotTest Key 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
+#client = openai.OpenAI(api_key="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")
+
+
+
 #MMDKey
 #client = openai.OpenAI(api_key="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")
+
 #DiagnoBotKey
-#client = openai.OpenAI("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")
+client = openai.OpenAI("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")
 
 
 #print(response.choices[0].message.content)
@@ -67,7 +71,7 @@ def summarize_text(text):
     """Summarize the medical report using OpenAI"""
     #gpt-3.5-turbo, gpt-4, gpt-4-turbo, gpt-4o-mini, GPT-4o
     response = client.chat.completions.create(
-        model="GPT-4o", 
+        model="gpt-4o-mini", 
             messages=[
             {"role": "system", "content": "You are a medical assistant that simplifies reports for patients."},
             {"role": "user", "content": f"Summarize this medical report in layman's terms:\n{text}"}
