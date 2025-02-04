@@ -21,8 +21,8 @@ app.add_middleware(
 
 # OpenAI API Key (Replace with your key)
 #openai.api_key = "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"
-client = openai.OpenAI(api_key="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")
-#client = openai.OpenAI(api_key="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")
+#client = openai.OpenAI(api_key="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")
+client = openai.OpenAI(api_key="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")
 
 
 #print(response.choices[0].message.content)
@@ -62,7 +62,7 @@ def summarize_text(text):
     """Summarize the medical report using OpenAI"""
     #gpt-3.5-turbo, gpt-4, gpt-4-turbo, gpt-4o-mini
     response = client.chat.completions.create(
-        model="gpt-4", 
+        model="gpt-4-turbo", 
             messages=[
             {"role": "system", "content": "You are a medical assistant that simplifies reports for patients."},
             {"role": "user", "content": f"Summarize this medical report in layman's terms:\n{text}"}
