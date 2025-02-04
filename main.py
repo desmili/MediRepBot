@@ -27,7 +27,10 @@ app.add_middleware(
 #MMDKey
 #client = openai.OpenAI(api_key="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")
 #DiagnoBotKey
-client = openai.OpenAI(api_key="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", project="proj_SCqF62rYmcBujgn3QbEcZ2lI")
+#client = openai.OpenAI(api_key="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", project="proj_SCqF62rYmcBujgn3QbEcZ2lI")
+openai.api_key = "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"
+
+
 
 #print(response.choices[0].message.content)
 # Medical terms for validation
@@ -65,8 +68,8 @@ def is_medical_report(text):
 def summarize_text(text):
     """Summarize the medical report using OpenAI"""
     #gpt-3.5-turbo, gpt-4, gpt-4-turbo, gpt-4o-mini, GPT-4o
-    response = client.ChatCompletion.create(
-        model="gpt-4o-mini", 
+    response = openai.ChatCompletion.create(
+        model="gpt-4", 
             messages=[
             {"role": "system", "content": "You are a medical assistant that simplifies reports for patients."},
             {"role": "user", "content": f"Summarize this medical report in layman's terms:\n{text}"}
